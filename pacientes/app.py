@@ -72,7 +72,7 @@ class Pacientes(object):
     if index == 0:
       nodeToDelete = self.head
       self.head = self.head.next
-      self.length += 1
+      self.length -= 1
       return nodeToDelete 
 
     current = self.head
@@ -85,6 +85,8 @@ class Pacientes(object):
 
     nodeToDelete = current
     previous.next = current.next
+    self.length -= 1
+    return nodeToDelete
 
   def show(self):
     pacientes = []
