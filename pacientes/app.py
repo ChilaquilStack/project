@@ -22,7 +22,6 @@ class Pacientes(object):
     self.length += 1
 
   def pop(self):
-    
     if self.isEmpty():
       return None
 
@@ -42,10 +41,9 @@ class Pacientes(object):
       currentNode = currentNode.next
     seconToLastNode.next = None
     self.tail = seconToLastNode
-    self.length += 1
+    self.length -= 1
 
   def get(self, index):
-    
     if index < 0 or index > self.length:
       return None
     
@@ -65,7 +63,6 @@ class Pacientes(object):
     return current
 
   def delete(self, index):
-    
     if index < 0 or index > self.length - 1:
       return None
 
